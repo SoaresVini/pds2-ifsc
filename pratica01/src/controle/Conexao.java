@@ -8,15 +8,15 @@ public class Conexao {
 
 	private static Connection conexao;
 	private static Conexao instancia;
-	private static final String DATABASE = "hr";
-	private static final String USER = "aluno";
+	private static final String DATABASE = "vini";
+	private static final String USER = "root";
 	private static final String PSW = "aluno";
 
 	private Conexao() {
 
 	}
 
-	public Conexao getInstancia() {
+	public static Conexao getInstancia() {
 		if (instancia == null) {
 			instancia = new Conexao();
 		}
