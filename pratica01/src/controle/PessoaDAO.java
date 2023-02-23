@@ -9,13 +9,15 @@ import java.util.ArrayList;
 
 import javax.naming.spi.DirStateFactory.Result;
 
+import com.mysql.cj.protocol.NamedPipeSocketFactory;
+
 import modelo.Pessoa;
 
 public class PessoaDAO {
 	
 	
+	private static final Pessoa[] TablePessoa = null;
 	private static Conexao conect;
-	
 	
 	// create
 	public Boolean inserir(Pessoa p) {
@@ -31,8 +33,8 @@ public class PessoaDAO {
 				String query = "insert into pessoa(cpf, nome) values (?, ?);";
 				PreparedStatement stm = c.prepareStatement(query);
 				
-				stm.setInt(1, 123);
-				stm.setString(2, "Vini");
+				stm.setInt(1, p.getpCpf());
+				stm.setString(2, p.getpNome());
 			
 				stm.executeUpdate();
 				
@@ -43,7 +45,7 @@ public class PessoaDAO {
 			//fechar
 			conect.fecharConexao();
 			
-			return false;
+			return true;
 	}
 	
 	//UPDATE
