@@ -1,0 +1,33 @@
+﻿Nome: Vinicius Soares - I5
+
+
+1. Pesquise e descreva: no contexto de programação, o que é uma “biblioteca” e o que é uma “API”? Diferencie ambas utilizando as suas próprias palavras.
+
+
+Biblioteca, são vários recursos que a linguagem possui e que o programador pode usar para para desenvolver seu programa. 
+
+
+API, é uma maneira que permite diferentes linguagens se comunicarem umas com as outras.
+
+
+A principal diferença entre as duas é que as bibliotecas são coleções de classes e métodos soltos, que você pode usar para qualquer fim. A API são recursos utilizados para construir uma aplicação.
+
+
+2. Defina brevemente e descreva a razão para se utilizar os padrões de projetos abaixo:
+
+
+MVC: É um modelo de padrão de projeto de software que você consegue organizar e facilitar as trocas de informação na criação do projeto, podendo assim separar as regras de negócio das interfaces.
+
+
+DAO: Gerenciar a conexão do banco de dados para obter e armazenar informações, eles são responsáveis por trocar informações com o SGBD e fornecer operações CRUD e de pesquisas. Com o DAO é possível melhorar a manutenção do aplicativo e permite que diferentes fontes de dados possam ser usadas sem afetar o restante do código.
+
+
+Singleton:  É um padrão de projeto que permite que apenas uma instância de uma classe seja criada em toda a aplicação. Além de ter uma facilidade na sua implementação, podemos implementar qualquer lógica ou dado que seja usado várias vezes no sistema. 
+
+
+
+
+3. O que é JDBC e como ele se relaciona com bancos de dados e a programação em Java? 
+
+
+Uma API do java que permite executar e consultar o banco de dados, atualizar registros, obter metadados de banco de dados e manipular dados em geral. Com ele , podemos criar uma camada abstrata entre a aplicação e o banco de dados.
