@@ -20,7 +20,7 @@ public class CriaBanco {
 			stm.executeUpdate(wQuery);
 			
 			wQuery = "CREATE TABLE matricula ("
-					+ "  mataricula int primary key,"
+					+ "  matricula int primary key,"
 					+ "  nome_aluno varchar(40),"
 					+ "  idade_aluno int)";
 			stm.executeUpdate(wQuery);	
