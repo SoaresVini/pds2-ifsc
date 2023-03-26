@@ -16,7 +16,9 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
-public class atvd extends JFrame {
+import ex10.Consultar;
+
+public class Cadastrar extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField edMatricula;
@@ -31,7 +33,7 @@ public class atvd extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					atvd frame = new atvd();
+					Cadastrar frame = new Cadastrar();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -43,7 +45,7 @@ public class atvd extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public atvd() {
+	public Cadastrar() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 446, 216);
 		contentPane = new JPanel();
@@ -52,13 +54,32 @@ public class atvd extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 
+		JButton btCons = new JButton("Consultar");
+		btCons.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Consultar cons;
+				try {
+					cons = new Consultar();
+					cons.setLocationRelativeTo(null);
+					cons.setVisible(true);
+					dispose();
+				} catch (SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+			
+			}
+		});
+		btCons.setBounds(255, 120, 126, 23);
+		contentPane.add(btCons);
+		
 		JButton btCad = new JButton("Cadastro");
 		btCad.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
 				try {
 
-					conexao = DriverManager.getConnection("jdbc:mysql://localhost/" + "aluno", "root", "aluno");
+					conexao = DriverManager.getConnection("jdbc:mysql://localhost/" + "aluno", "root", "");
 
 					String wSQL = "INSERT INTO matricula(matricula,nome_aluno,idade_aluno) VALUES (?,?,?)";
 					PreparedStatement stm = conexao.prepareStatement(wSQL);
@@ -75,10 +96,13 @@ public class atvd extends JFrame {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
-
+				
+				edMatricula.setText("");
+				edIdade.setText("");
+				edNome.setText("");
 			}
 		});
-		btCad.setBounds(166, 137, 89, 23);
+		btCad.setBounds(94, 121, 126, 23);
 		contentPane.add(btCad);
 
 		edMatricula = new JTextField();
@@ -110,5 +134,6 @@ public class atvd extends JFrame {
 		lbIdade.setHorizontalAlignment(SwingConstants.RIGHT);
 		lbIdade.setBounds(84, 92, 46, 14);
 		contentPane.add(lbIdade);
+		
 	}
 }

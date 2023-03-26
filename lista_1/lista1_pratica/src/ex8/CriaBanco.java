@@ -10,7 +10,7 @@ public class CriaBanco {
 	public static void main(String[] args) {
 
 		try {
-			Connection conexao =  DriverManager.getConnection("jdbc:mysql://localhost/","root","aluno");
+			Connection conexao =  DriverManager.getConnection("jdbc:mysql://localhost/","root","");
 		
 			Statement stm = conexao.createStatement();
 			String wQuery = "CREATE DATABASE aluno";
