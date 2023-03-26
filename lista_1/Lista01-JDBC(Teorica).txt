@@ -3,18 +3,14 @@
 
 1. Pesquise e descreva: no contexto de programação, o que é uma “biblioteca” e o que é uma “API”? Diferencie ambas utilizando as suas próprias palavras.
 
-
-Biblioteca, são vários recursos que a linguagem possui e que o programador pode usar para para desenvolver seu programa. 
-
+Biblioteca, são vários recursos que a linguagem possui e que o programador pode usar para para desenvolver seu programa.
 
 API, é uma maneira que permite diferentes linguagens se comunicarem umas com as outras.
-
 
 A principal diferença entre as duas é que as bibliotecas são coleções de classes e métodos soltos, que você pode usar para qualquer fim. A API são recursos utilizados para construir uma aplicação.
 
 
 2. Defina brevemente e descreva a razão para se utilizar os padrões de projetos abaixo:
-
 
 MVC: É um modelo de padrão de projeto de software que você consegue organizar e facilitar as trocas de informação na criação do projeto, podendo assim separar as regras de negócio das interfaces.
 
@@ -22,12 +18,33 @@ MVC: É um modelo de padrão de projeto de software que você consegue organizar
 DAO: Gerenciar a conexão do banco de dados para obter e armazenar informações, eles são responsáveis por trocar informações com o SGBD e fornecer operações CRUD e de pesquisas. Com o DAO é possível melhorar a manutenção do aplicativo e permite que diferentes fontes de dados possam ser usadas sem afetar o restante do código.
 
 
-Singleton:  É um padrão de projeto que permite que apenas uma instância de uma classe seja criada em toda a aplicação. Além de ter uma facilidade na sua implementação, podemos implementar qualquer lógica ou dado que seja usado várias vezes no sistema. 
+Singleton:  É um padrão de projeto que permite que apenas uma instância de uma classe seja criada em toda a aplicação. Além de ter uma facilidade na sua implementação, podemos implementar qualquer lógica ou dado que seja usado várias vezes no sistema.
 
 
-
-
-3. O que é JDBC e como ele se relaciona com bancos de dados e a programação em Java? 
-
+3. O que é JDBC e como ele se relaciona com bancos de dados e a programação em Java?
 
 Uma API do java que permite executar e consultar o banco de dados, atualizar registros, obter metadados de banco de dados e manipular dados em geral. Com ele , podemos criar uma camada abstrata entre a aplicação e o banco de dados.
+
+
+4. O que significa “CRUD” e como ele se  relaciona com os quatro métodos que implementamos em nossas classes DAO?
+
+CRUD é uma abreviação para Create, Read, Update, Delete que são as quatro operações básicas de gerenciamento de banco de dados relacionais para manipular dados. O DAO(Data Access Object) é a classe responsável por fornecer os acesso aos dados que estão no banco de dados, o qual utiliza o CRUD como operações fundamentais que podem ser realizadas com os objetos que estão no banco de dados.
+
+
+5.Explique brevemente e com suas palavras qual a utilidade das três classes abaixo:
+
+- Connection: Interface responsável por gerenciar a conexão com o banco de dados.
+- PreparedStatement: Interface responsável por executar os comandos SQL simples.
+- Statement: Interface responsável por executar os comandos SQL com variáveis.
+
+
+6. Considere a execução de uma query SQL no banco de dados. Se esperamos um retorno de dados do banco de dados devemos usar a classe Statement ou PreparedStatement? Justifique. (Dica: é possível usar ambas; procure a diferença técnica entre as classes.).
+
+Com o PreparedStatement podemos definir parâmetros, o que ajuda na segurança do sistema, podemos reutilizar os parâmetros diferentes várias vezes. Além disso, é pré-compilado o que permite uma otimização na consulta de dados e a execução dos comandos.
+
+
+7. Com as suas próprias palavras, diferencie SWING do WINDOWBUILDER.
+
+Swing é um biblioteca de com componentes de interface gráfica de usuário em Java que requer escrita manual de código.
+
+WindowBuilder é uma ferramenta que gera automaticamente o código Swing para criar interfaces gráficas de usuário.

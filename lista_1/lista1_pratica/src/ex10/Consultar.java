@@ -70,7 +70,7 @@ public class Consultar extends JFrame {
 		conexao = DriverManager.getConnection("jdbc:mysql://localhost/" + "aluno", "root", "");
 		
 			String wSql = "SELECT * FROM matricula";
-			Statement stm = (Statement) conexao.prepareStatement(wSql);
+			Statement stm = conexao.prepareStatement(wSql);
 			ResultSet rs = stm.executeQuery(wSql);
 			
 			
